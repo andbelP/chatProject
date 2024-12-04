@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "299099369534",
+    "firebase_url": "https://chatprojectsesc-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "chatprojectsesc",
     "storage_bucket": "chatprojectsesc.firebasestorage.app"
   },

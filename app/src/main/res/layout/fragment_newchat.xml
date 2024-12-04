@@ -7,16 +7,18 @@
     tools:context=".bottomnav.newchat.NewChatFragment">
 
 
-    <ImageButton
+    <Button
         android:id="@+id/logout_btn"
         android:layout_width="113dp"
         android:layout_height="93dp"
         android:backgroundTint="@android:color/transparent"
-        android:text="dsfdf"
+        android:text="logoutButton"
         android:background="@color/black"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="268dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -27,5 +29,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/users_rv"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
