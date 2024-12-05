@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.chatproject.R;
+import com.example.chatproject.utils.ChatUtil;
 
 import java.util.ArrayList;
 public class UserAdapter extends RecyclerView.Adapter<UserViewHolder>{
@@ -23,8 +24,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder>{
     }
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
-        holder.username_tv.setText(users.get(position).email);
+        User user = users.get(position);
+
+        holder.username_tv.setText(user.email);
+        holder.itemView.setOnClickListener(view -> {
+            ChatUtil.createChat(user);
+        });
     }
+
     @Override
     public int getItemCount() {
         return users.size();

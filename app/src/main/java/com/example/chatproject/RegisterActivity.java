@@ -37,20 +37,15 @@ public class RegisterActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()){
-                                    users = FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getUid());
-                                    User user = new User(binding.emailEt.getText().toString());
-                                    users.setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<Void> task) {
-                                            if (task.isSuccessful()) {
-                                                startActivity(new Intent(RegisterActivity.this, MainActivity.class));
-                                            } else {
-                                                Toast.makeText(getApplicationContext(), "Failed to store user data", Toast.LENGTH_SHORT).show();
-                                            }
-                                        }
-                                    });
-                                }
+                                    HashMap<String, String> userInfo = new HashMap<>();
+                                    userInfo.put("email", binding.emailEt.getText().toString());
+                                    userInfo.put("chats", "");
 
+                                    FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                            .setValue(userInfo);
+
+                                    startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                                }
                             }
                         });
 

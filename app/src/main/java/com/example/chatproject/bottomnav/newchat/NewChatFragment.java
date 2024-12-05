@@ -36,8 +36,9 @@ public class NewChatFragment extends Fragment {
                     if (userSnapshot.getKey().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())){
                         continue;
                     }
+                    String uid = userSnapshot.getKey();
                     String username = userSnapshot.child("email").getValue().toString();
-                    users.add(new User(username));
+                    users.add(new User(username,uid));
                 }
                 binding.usersRv.setLayoutManager(new LinearLayoutManager(getContext()));
                 binding.usersRv.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
