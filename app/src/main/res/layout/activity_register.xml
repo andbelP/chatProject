@@ -5,8 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:background="@color/white">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:id="@+id/backbutton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/login_title"
         android:layout_width="wrap_content"
@@ -69,6 +77,10 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
         android:layout_marginTop="80dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
         android:text="Зарегистрироваться"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

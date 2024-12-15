@@ -12,20 +12,23 @@
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="15dp"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:background="@color/black">
 
         <TextView
             android:id="@+id/message_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:textSize="17sp"
-            tools:text="This is message text"/>
+            tools:text="This is message text" />
         <TextView
             android:id="@+id/message_date_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             tools:text="12.01.2022 13:30"
+            android:textColor="@color/grey"
             android:textSize="13sp"
             android:layout_marginTop="10dp"/>
     </LinearLayout>

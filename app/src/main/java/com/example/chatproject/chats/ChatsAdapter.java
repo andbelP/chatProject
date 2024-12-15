@@ -45,8 +45,10 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatViewHolder>{
         }
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(holder.itemView.getContext(), ChatActivity.class);
-            intent.putExtra("chatId", chats.get(position).getChat_id());
-            holder.itemView.getContext().startActivity(intent);
+            if(!FirebaseDatabase.getInstance().getReference().child("Chats").getRef().equals(chats.get(position).getChat_id())){
+                intent.putExtra("chatId", chats.get(position).getChat_id());
+                holder.itemView.getContext().startActivity(intent);
+            }
         });
     }
 

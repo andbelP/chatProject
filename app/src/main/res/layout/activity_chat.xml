@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatActivity">
+    tools:context=".ChatActivity"
+    android:background="@color/white">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messages_rv"
@@ -15,7 +16,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginBottom="100dp"
+        />
 
     <EditText
         android:id="@+id/message_et"
@@ -24,15 +27,18 @@
         android:layout_margin="10dp"
         android:hint="Type your message..."
         android:padding="13dp"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
     <Button
         android:id="@+id/send_message_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:backgroundTint="@android:color/transparent"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/message_et"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/black"
+        android:text="send"
+        android:textColor="#000000"
         app:layout_constraintTop_toTopOf="@+id/message_et" />
 </androidx.constraintlayout.widget.ConstraintLayout>

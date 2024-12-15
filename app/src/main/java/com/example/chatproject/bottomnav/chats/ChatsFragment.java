@@ -1,5 +1,6 @@
 package com.example.chatproject.bottomnav.chats;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.example.chatproject.LoginActivity;
+import com.example.chatproject.MainActivity;
+import com.example.chatproject.RegisterActivity;
 import com.example.chatproject.chats.ChatsAdapter;
 import com.example.chatproject.chats.chat;
 import com.example.chatproject.databinding.FragmentChatsBinding;
@@ -31,9 +35,11 @@ public class ChatsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentChatsBinding.inflate(inflater, container, false);
-
+        if(FirebaseAuth.getInstance().getCurrentUser()!=null)
         loadChats();
-
+        else{
+            startActivity(new Intent(getContext(), LoginActivity.class));
+        }
         return binding.getRoot();
     }
     private void loadChats(){

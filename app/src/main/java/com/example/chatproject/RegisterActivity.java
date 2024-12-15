@@ -46,9 +46,19 @@ public class RegisterActivity extends AppCompatActivity {
 
                                     startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                                 }
+                                else{
+                                    Exception e = task.getException();
+                                    Toast.makeText(getApplicationContext(),e.toString(),Toast.LENGTH_LONG).show();
+                                }
                             }
                         });
 
+            }
+        });
+        binding.backbutton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
             }
         });
     }
