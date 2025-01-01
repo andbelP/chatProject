@@ -11,89 +11,107 @@
         android:id="@+id/login_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="32dp"
-        android:text="Авторизация"
+        android:layout_marginTop="40dp"
+        android:text="@string/title_activity_login"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/dark_text"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/email_lin"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="34dp"
+        app:layout_constraintStart_toStartOf="@id/login_title"
         app:layout_constraintTop_toBottomOf="@id/login_title"
-        app:layout_constraintStart_toStartOf="parent"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
 
         <EditText
             android:id="@+id/email_et"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:hint="Email"
-            android:textColorHint="@color/black"/>
-
+            android:hint="@string/prompt_email"
+            android:textColorHint="@color/primary"
+            android:textColor="@color/dark_text"
+            android:background="@drawable/rounded_input_field"
+            android:padding="15dp"/>
     </LinearLayout>
 
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/password_lin"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@id/email_lin"
-        app:layout_constraintStart_toStartOf="parent"
-        android:orientation="horizontal">
+        app:layout_constraintStart_toStartOf="@id/email_lin"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        >
         <EditText
             android:id="@+id/password_et"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:hint="Password"
+            android:hint="@string/prompt_password"
             android:inputType="textPassword"
-            android:textColorHint="@color/black"/>
-
-
+            android:textColorHint="@color/primary"
+            android:textColor="@color/dark_text"
+            android:background="@drawable/rounded_input_field"
+            android:padding="15dp"/>
     </LinearLayout>
 
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="268dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        android:layout_marginTop="80dp"
-        android:text="Авторизоваться"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/dark_text"
+        android:text="@string/sign_in_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_lin" />
+        app:layout_constraintTop_toBottomOf="@+id/password_lin"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="50dp"
         app:layout_constraintTop_toBottomOf="@id/login_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Нету аккаунта?"/>
+            android:text="@string/no_account"
+            android:textColor="@color/grey"
+            />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="ЗАРЕГИСТРИРОВАТЬСЯ"
+            android:text="@string/register_btn"
             android:id="@+id/goreg"
-            android:layout_marginStart="7dp"/>
+            android:layout_marginStart="7dp"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/dark_text"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
