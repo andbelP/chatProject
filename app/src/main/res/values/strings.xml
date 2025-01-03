@@ -13,4 +13,5 @@
     <string name="title_activity_register">Регистрация</string>
     <string name="sign_in_btn">Войти</string>
     <string name="register_btn">Зарегистрироваться</string>
+    <string name="message_input_prompt">Напишите сообщение…</string>
 </resources>

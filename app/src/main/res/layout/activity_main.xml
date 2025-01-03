@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/fragment_container"
-        android:layout_marginBottom="80dp"/>
+        android:layout_marginBottom="80dp"
+        android:background="@color/white"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
@@ -24,7 +25,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/bottomnavigationmenu" />
+        app:menu="@menu/bottomnavigationmenu"
+        android:background="@color/primary"
+        app:itemTextColor="@color/dark_text"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

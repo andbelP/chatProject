@@ -3,18 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/username_tv"
-        android:layout_width="239dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="4dp"
-        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_text"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@id/username_tv"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Username" />
+        tools:text="Username"
+        android:background="@drawable/person_item"
+        android:padding="15dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="-2dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
