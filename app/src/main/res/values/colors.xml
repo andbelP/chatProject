@@ -2,5 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="grey">#999999</color>
+    <color name="grey">#FF747179</color>
+    <color name="primary">#00E6FF</color>
+    <color name="dark_text">#00435B</color>
+    <color name="input_message">#00CE67</color>
+    <color name="debug">#FFFF0000</color>
 </resources>

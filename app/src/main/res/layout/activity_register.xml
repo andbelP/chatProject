@@ -8,83 +8,80 @@
     tools:context=".RegisterActivity"
     android:background="@color/white">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="back"
-        android:id="@+id/backbutton"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/login_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="36dp"
-        android:text="Регистрация"
+        android:layout_marginTop="40dp"
+        android:text="@string/title_activity_register"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/dark_text"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/email_lin"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="34dp"
+        app:layout_constraintStart_toStartOf="@id/login_title"
         app:layout_constraintTop_toBottomOf="@id/login_title"
-        app:layout_constraintStart_toStartOf="parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
 
 
         <EditText
             android:id="@+id/email_et"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:hint="Email"
-            android:textColorHint="@color/black"/>
-
+            android:hint="@string/prompt_email"
+            android:textColorHint="@color/primary"
+            android:textColor="@color/dark_text"
+            android:background="@drawable/rounded_input_field"
+            android:padding="15dp"/>
     </LinearLayout>
 
-
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/password_lin"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
         app:layout_constraintTop_toBottomOf="@id/email_lin"
-        app:layout_constraintStart_toStartOf="parent"
-        android:orientation="horizontal">
+        app:layout_constraintStart_toStartOf="@id/email_lin"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        >
         <EditText
             android:id="@+id/password_et"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9dp"
-            android:hint="Password"
+            android:hint="@string/prompt_password"
             android:inputType="textPassword"
-            android:textColorHint="@color/black"/>
-
-
+            android:textColorHint="@color/primary"
+            android:textColor="@color/dark_text"
+            android:background="@drawable/rounded_input_field"
+            android:padding="15dp"/>
     </LinearLayout>
 
     <Button
         android:id="@+id/reg_btn"
-        android:layout_width="268dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
-        android:layout_marginTop="80dp"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
-        android:text="Зарегистрироваться"
+        android:backgroundTint="@color/primary"
+        android:textColor="@color/dark_text"
+        android:text="@string/register_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_lin" />
+        app:layout_constraintTop_toBottomOf="@+id/password_lin"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
