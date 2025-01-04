@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatActivity">
+    tools:context=".ChatActivity"
+    android:background="@color/white">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messages_rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/message_et"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         android:background="@color/white"/>
 
     <EditText
@@ -28,17 +27,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/send_message_btn"
-        android:background="@drawable/rounded_input_field"/>
+        android:background="@drawable/output_message_input_field"
+        android:textColor="@color/white"
+        android:textColorHint="@color/light_grey"/>
     <Button
         android:id="@+id/send_message_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="->"
-        android:textColor="@color/dark_text"
-        app:backgroundTint="@color/primary"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/output_message_ui"
         android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/message_et"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/message_et"
         android:padding="15dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
