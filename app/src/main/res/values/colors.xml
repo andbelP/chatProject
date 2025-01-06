@@ -3,8 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#FF747179</color>
+    <color name="light_grey">#A0A0A0</color>
     <color name="primary">#00E6FF</color>
     <color name="dark_text">#00435B</color>
     <color name="input_message">#00CE67</color>
-    <color name="debug">#FFFF0000</color>
+    <color name="output_message_ui">#0080FF</color>
 </resources>
