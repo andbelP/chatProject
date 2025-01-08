@@ -18,7 +18,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     private ActivityLoginBinding binding;
-
+    public void incorrectFieldsToast(){
+        Toast.makeText(getApplicationContext(), "Проверьте корректность полей", Toast.LENGTH_SHORT).show();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +42,7 @@ public class LoginActivity extends AppCompatActivity {
                                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                     }
                                     else{
-                                        Exception e = task.getException();
-                                        Toast.makeText(getApplicationContext(),e.toString(),Toast.LENGTH_LONG).show();
+                                        incorrectFieldsToast();
                                     }
                                 }
                             });
@@ -53,6 +54,22 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            }
+        });
+        binding.forgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().sendPasswordResetEmail(binding.emailEt.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(getApplicationContext(), "Письмо отправлено на ваш email", Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            incorrectFieldsToast();
+                        }
+                    }
+                });
             }
         });
     }

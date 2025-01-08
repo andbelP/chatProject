@@ -62,7 +62,15 @@
             android:background="@drawable/rounded_input_field"
             android:padding="15dp"/>
     </LinearLayout>
-
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/password_lin"
+        app:layout_constraintBottom_toTopOf="@id/login_btn"
+        android:text="Забыли пароль?"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
     <Button
         android:id="@+id/login_btn"
         android:layout_width="wrap_content"
