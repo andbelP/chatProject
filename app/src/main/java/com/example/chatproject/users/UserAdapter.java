@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.chatproject.R;
+import com.example.chatproject.bottomnav.newchat.NewChatFragment;
 import com.example.chatproject.utils.ChatUtil;
 
 import java.util.ArrayList;
@@ -29,6 +30,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder>{
         holder.username_tv.setText(user.email);
         holder.itemView.setOnClickListener(view -> {
             ChatUtil.createChat(user);
+            users.remove(user);
+            notifyDataSetChanged();
         });
     }
 
